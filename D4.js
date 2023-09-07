@@ -81,6 +81,7 @@ const epify = function (string) {
   }
 }
 console.log(epify("è una scuola"))
+console.log(epify("EPCODE è una scuola"))
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
@@ -125,7 +126,6 @@ console.log("Stringa invertita:" + stringReverse)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const upperFirst = function (g) {}
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
@@ -139,3 +139,11 @@ const upperFirst = function (g) {}
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const giveMeRandom = function (o) {
+  const randomNumber = []
+  for (let i = 0; i < o; i++) {
+    randomNumber.push(Math.floor(Math.random() * 10))
+  }
+  return randomNumber
+}
+console.log(giveMeRandom(6))
