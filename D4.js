@@ -105,24 +105,29 @@ console.log(check3and7(7))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const reverseString = function (n) {
-  let reversingString = ""
-  for (let i = n.length - 1; i >= 0; i--) {
-    reversingString += n.charAt(i)
-  }
-  return reversingString
+const reverseString = function (str) {
+  const stringArray = str.split("")
+  stringArray.reverse()
+  const stringAgain = stringArray.join("")
+  return stringAgain
 }
-
-const stringOriginal = "EPICODE"
-const stringReverse = reverseString(stringOriginal)
-console.log("Stringa originale:" + stringOriginal)
-console.log("Stringa invertita:" + stringReverse)
+console.log(reverseString("EPICODE"))
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const upperFirst = function (str) {
+  let result = " "
+  const arrayOfWords = result.split(" ")
+  for (let i = 0; i < arrayOfWords.length; i++) {
+    result +=
+      arrayOfWords[i].slice(0, 1).toUpperCase() + arrayOfWords[i].slice(1) + ""
+  }
+  return result
+}
+console.log(upperFirst("Ma come cavoli si fa sta roba"))
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
@@ -130,6 +135,13 @@ console.log("Stringa invertita:" + stringReverse)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const cutString = function (str) {
+  let result
+  result = str.slice(1)
+  result = str.slice(0, result.length - 1)
+  return result
+}
+console.log(cutString("EPICODE"))
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
