@@ -36,9 +36,9 @@ console.log(crazySum(2, 19))
 const crazyDiff = function (x) {
   let diff = x - 19
   if (x > 19) {
-    Math.abs(diff) * 3
+    return Math.abs(diff) * 3
   } else {
-    Math.abs(diff)
+    return Math.abs(diff)
   }
 }
 
@@ -52,9 +52,7 @@ console.log(crazyDiff(22))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const boundary = function (n) {
-  if (n >= 20 && n <= 100) {
-    return true
-  } else if (n === 400) {
+  if ((n >= 20 && n <= 100) || n === 400) {
     return true
   } else {
     return false
@@ -72,12 +70,11 @@ console.log(boundary(500))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const epify = function (string) {
-  let myString = string.toString()
-  if (myString.slice(0, 1).toUpperCase() !== "EPICODE") {
-    return myString + "EPCODE"
+const epify = function (str) {
+  if (!str.slice(0, 8) !== "EPICODE") {
+    return "EPICODE" + str
   } else {
-    return myString.slice(0, 1).toUpperCase() + myString.slice(0)
+    return str
   }
 }
 console.log(epify("è una scuola"))
