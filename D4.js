@@ -33,12 +33,12 @@ console.log(crazySum(2, 19))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const crazyDiff = function (x, y = 19) {
-  let diff = 0
-  if (x < 19) {
-    return (diff = Math.abs(x - y))
-  } else if (x > 19) {
-    return (diff = Math.abs((x - y) * 3))
+const crazyDiff = function (x) {
+  let diff = x - 19
+  if (x > 19) {
+    Math.abs(diff) * 3
+  } else {
+    Math.abs(diff)
   }
 }
 
