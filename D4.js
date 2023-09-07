@@ -71,14 +71,14 @@ console.log(boundary(500))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const epify = function (str) {
-  if (!str.slice(0, 8) !== "EPICODE") {
-    return "EPICODE" + str
-  } else {
+  if (str.startsWith("EPICODE")) {
     return str
+  } else {
+    return "EPICODE" + str
   }
 }
-console.log(epify("è una scuola"))
-console.log(epify("EPCODE è una scuola"))
+console.log(epify(" è una scuola"))
+console.log(epify("EPCODE"))
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
@@ -139,7 +139,7 @@ console.log("Stringa invertita:" + stringReverse)
 const giveMeRandom = function (o) {
   const randomNumber = []
   for (let i = 0; i < o; i++) {
-    randomNumber.push(Math.floor(Math.random() * 10))
+    randomNumber.push(Math.floor(Math.random() * 11))
   }
   return randomNumber
 }
